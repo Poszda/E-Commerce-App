@@ -1,0 +1,63 @@
+/* ------ section 1 ------ */
+.header-container{
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-container #background{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.header-container .image-filter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgb(17,15,22);
+    background: linear-gradient(90deg, rgba(17,15,22,1) 15%, rgba(99,32,238,0.35)75%);
+    
+}
+.header-container .text{
+    position: absolute;
+    color: white;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header-container .title{
+    font-size: 50px;    
+}
+.header-container .beforetitle{
+    margin-bottom:10px;
+}
+.header-container .aftertitle{
+    margin-top:20px;
+}
+.header-container .line{
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1024px) {
+    .header-container .title{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .header-container .text{
+        text-align: center;
+    }
+    .header-container .line{
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 300px) {
+}

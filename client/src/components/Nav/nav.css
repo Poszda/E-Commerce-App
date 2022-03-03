@@ -1,0 +1,125 @@
+.navbar{
+    width: 100%;
+    height: 100px;
+    position:fixed; 
+    /* background-color: transparent; */
+/*     background-color: blueviolet; */
+    color: white;
+    transition-delay: 1s;
+    z-index: 100;
+  }
+  .navbar.active{
+    height: 100vh;
+    transition: none;
+  }
+  .navbar-header{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    z-index: 100;
+  }
+  .navbar-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+/*   .navbar-button.bar{
+    transition: all 1s ease-in-out; ?? care e diferenta 
+  }
+  .navbar-button.active .bar{
+   transition: all 1s ease-in-out;
+  } */
+  .navbar-button.active .bar:nth-child(1){
+   
+    transform: translateY(3.5px) rotate(45deg);
+  }
+  .navbar-button.active .bar:nth-child(2){
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+  .bar{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    transition: all 1s ease-in-out;
+  }
+  .navbar-container{
+    /* background-color: brown; */
+    height: 100%;
+    display: flex;
+    visibility: hidden;
+  }
+  .navbar-container.active{ /* diferenta dintre blabla.active si blabla .active */
+    visibility: visible;
+  }
+  .navbar-container-left{
+    background-color:#6320ee; /* 6320EE , 4D6CFA , F7FF58 , EC0B43 , */
+    width: 50%; /* flex-grow: 1; ???? */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100vh);/* de ce merge cu 80??? */
+    transition: all 1s ease-in-out;
+  }
+  .navbar-container-left.active{
+    transform: translateY(0vh);
+    transition: all 1s ease-in-out;
+  }
+  .navbar-container-right{
+    background-color:#110F16;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    transform: translateY(100vh);
+    transition: all 1s ease-in-out;
+  }
+  .navbar-container-right.active{
+    transform: translateY(0vh);
+    transition: all 1s ease-in-out;
+  }
+  .navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .navbar a{
+    font-size: 35px;
+    color:white;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .navbar-container-right-section-1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    }
+    .navbar-container-right-section-1 .beforetitle{
+      font-size: 12px;
+    }
+    .navbar-container-right-section-1 .title{
+      font-size: 35px;
+    }
+    
+  @media only screen and (max-width: 600px) {
+    .navbar-container-left{
+      width: 100%;
+    }
+    .navbar-container-right{
+      width: 0%;
+      display: none;
+    }
+  }
+  

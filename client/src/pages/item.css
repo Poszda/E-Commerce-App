@@ -1,0 +1,119 @@
+.item-section-1{
+min-height: 100vh;
+display: flex;
+}
+.item-section-1 .container{
+    width: 80%;
+    margin: auto;
+    gap:50px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.left-side{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+    width: 50%;
+}
+.item-section-1 .container .title{
+    font-size: 35px;
+}
+.text-boxes{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.text-box-1{
+width: 35%;
+font-size: 14px;
+}
+.text-box-2{
+    width: 65%;
+}
+.item-section-1 .button{
+    width: 150px;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    background-color: var(--color1);
+  }
+.slider-container{
+    width: 80%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+
+}
+.slider{
+    background-color: var(--color1);
+    height: 350px;
+    min-width: 250px;
+    min-height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+}
+.slider img{
+    width: 80%;
+}
+.other-images{
+    display: flex;
+    width: 80%;
+    margin:auto;
+    justify-content:center;
+    gap: 20px;
+
+}
+.other-images .img-wrapper{
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid white;
+
+}
+.other-images img {
+width: 80px;
+object-fit: cover;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 480px) {
+    .item-section-1{
+        flex-direction:column-reverse;
+    }
+    .left-side{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .right-side{
+        width: 100%;
+        padding-bottom: 100px;
+        padding-top: 50px;
+
+    }
+}
+@media only screen and (max-width: 300px) {
+}
